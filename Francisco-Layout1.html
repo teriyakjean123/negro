@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A's Cafe</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      body {
+        background-color: #6d4c41; /* main theme color */
+        color: #3e2723;
+      }
+
+      .logo {
+        width: 100%;
+        background-color: #4e342e;
+        padding: 15px 2%;
+        text-align: left;
+      }
+
+      .logo img {
+        width: 80px;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+
+      .logo h1 {
+        display: inline-block;
+        color: #f5f5f5;
+        margin-left: 15px;
+        font-size: 1.8em;
+        vertical-align: middle;
+      }
+
+      .nav-div {
+        width: 100%;
+        background-color: #5d4037;
+        text-align: center;
+        padding: 18px 0;
+      }
+
+      .nav-div button {
+        background-color: #a1887f;
+        border: none;
+        color: white;
+        padding: 12px 25px;
+        margin: 0 10px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .nav-div button:hover {
+        background-color: #4e342e;
+        transform: translateY(-2px);
+      }
+
+      .head-ban-div {
+        width: 100%;
+        min-height: 250px;
+        background-image: url(./assets/layout1/kafe.webp);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .head-ban-div h2 {
+        font-size: 2.3em;
+        background-color: rgba(77, 50, 40, 0.6);
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 8px;
+      }
+
+      .head-ban-div p {
+        background-color: rgba(93, 64, 55, 0.6);
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-size: 1.1em;
+      }
+
+      .side-body-div {
+        width: 100%;
+        padding: 20px 2%;
+      }
+
+      .side-div {
+        width: 30%;
+        background-color: #d7ccc8;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      .side-div:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        background-color: #efebe9;
+      }
+
+      .side-div h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #4e342e;
+        border-bottom: 2px solid #a1887f;
+        padding-bottom: 5px;
+      }
+
+      .side-div ul {
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+
+      .side-div li {
+        background-color: #a1887f;
+        color: white;
+        padding: 6px 10px;
+        margin-bottom: 6px;
+        border-radius: 5px;
+      }
+
+      .body-div {
+        width: 67%;
+        background-color: #d7ccc8;
+        padding: 25px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 2%;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      .body-div:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        background-color: #efebe9;
+      }
+
+      .body-div h2 {
+        color: #4e342e;
+        margin-bottom: 10px;
+      }
+
+      .body-div p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      .offer-section {
+        background-color: #efebe9;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08);
+        margin-top: 10px;
+      }
+
+      .offer-section p {
+        background-color: #d7ccc8;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 5px solid #a1887f;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+      }
+
+      .offer-section p:hover {
+        background-color: #f5f5f5;
+        transform: translateX(4px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      .offer-section strong {
+        color: #4e342e;
+        display: block;
+        font-size: 1.05em;
+        margin-bottom: 4px;
+      }
+
+      .Footer-div {
+        width: 100%;
+        background-color: #4e342e;
+        color: white;
+        text-align: center;
+        line-height: 25px;
+        padding: 15px 0;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="./assets/layout1/LATTE.jpg" alt="Coffee Logo" />
+      <h1>A's Cafe</h1>
+    </div>
+
+    <div class="nav-div">
+      <button class="home">Home</button>
+      <button class="Menu">Menu</button>
+      <button class="About">About</button>
+      <button class="Contact">Contact</button>
+    </div>
+
+    <div class="head-ban-div">
+      <h2>Welcome to A's Cafe</h2>
+      <p>Enjoy your Moment with A's Cafe</p>
+    </div>
+
+    <div class="side-body-div">
+      <div class="side-div">
+        <h3>Our Best Sellers</h3>
+        <ul>
+          <li>Caramel Macchiato</li>
+          <li>Spanish Latte</li>
+          <li>Iced Americano</li>
+          <li>Matcha</li>
+        </ul>
+
+        <h3>Special Offers</h3>
+        <p>☕ Buy 1 Get 1 Free Every Friday!</p>
+        <p>🎁 Offers free delivery with no charges</p>
+
+        <h3>Follow Us</h3>
+        <p>📸 Instagram: @A'sCafeICT</p>
+        <p>📘 Facebook: A's Cafe</p>
+      </div>
+
+      <div class="body-div">
+        <h2>A's Cafe</h2>
+        <p>
+          Brew Haven Coffee Shop is a cozy cafe with a passion for freshly
+          roasted coffee and warm community vibes.
+        </p>
+
+        <p>
+          To serve not just coffee, but comfort — a haven for students, workers,
+          and coffee lovers alike.
+        </p>
+
+        <h3>What We Offer</h3>
+        <div class="offer-section">
+          <p>
+            <strong>Coffee and Espresso Drinks:</strong> From rich espressos to
+            creamy lattes, every cup is brewed fresh with high-quality beans and
+            crafted to perfection.
+          </p>
+          <p>
+            <strong>Pastries and Sandwiches:</strong> Enjoy freshly baked
+            pastries, croissants, and hearty sandwiches — the perfect pair for
+            your favorite coffee.
+          </p>
+          <p>
+            <strong>Coffee Kiosk and Mobile Cart:</strong> Bringing the café
+            experience closer to you! Find our coffee carts around town serving
+            your favorite brews on the go.
+          </p>
+          <p>
+            <strong>Cozy Space and Open Seating:</strong> Whether you’re
+            studying, meeting friends, or just unwinding, our comfortable café
+            offers a calm and inviting atmosphere for everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer-div">© 2025 A's Cafe — Brewed with Love and Passion</div>
+  </body>
+</html>
