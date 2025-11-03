@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A's Café Blog - Layout 6</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #3e2723;
+        padding-top: 60px;
+        padding-left: 100px;
+      }
+
+      .logo-div {
+        background-color: #4e342e;
+        color: #f5f5f5;
+        position: fixed;
+        height: 60px;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+      }
+
+      .logo-div img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+
+      .logo-div h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .sidebar-div {
+        background-color: #6d4c41;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 110px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+      }
+
+      .sidebar-div button {
+        background-color: #a1887f;
+        border: none;
+        color: #ffffff;
+        padding: 10px 12px;
+        margin: 12px 0;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 75%;
+        transition: all 0.3s ease;
+      }
+
+      .sidebar-div button:hover {
+        background-color: #3e2723;
+        transform: translateY(-3px);
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .blog-card {
+        background-color: #ffffff;
+        width: 600px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .blog-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .blog-card .text {
+        padding: 20px;
+      }
+
+      .blog-card h2 {
+        margin-bottom: 10px;
+        color: #4e342e;
+      }
+
+      .blog-card p {
+        color: #5d4037;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-div">
+      <img src="./assets/layout1/LATTE.jpg" alt="A's Café Logo" />
+      <h1>A’s Café</h1>
+    </div>
+
+    <div class="sidebar-div">
+      <button>Home</button>
+      <button>Blog</button>
+      <button>About</button>
+      <button>Contact</button>
+    </div>
+
+    <div class="content">
+      <div class="blog-card">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+          alt="Coffee Blog 1"
+        />
+        <div class="text">
+          <h2>The Art of the Perfect Brew</h2>
+          <p>
+            Discover how our baristas craft the perfect espresso — balancing
+            flavor, aroma, and warmth to brighten your day, one cup at a time.
+          </p>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img
+          src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80"
+          alt="Cafe Atmosphere"
+        />
+        <div class="text">
+          <h2>Inside A’s Café</h2>
+          <p>
+            Step into our cozy café where community and creativity blend as
+            smoothly as our lattes. Here’s what makes us more than just a coffee
+            shop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
