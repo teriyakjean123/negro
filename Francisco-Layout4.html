@@ -18,68 +18,81 @@
         padding: 15px;
       }
 
-      .logo-div {
+      .Logo-Nav-div {
         width: 100%;
-        min-height: 100px;
         background-color: #4e342e;
-        color: #f5f5f5;
-        font-size: 2em;
-        font-weight: bold;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        padding-left: 30px;
+        padding: 15px 5%;
         border-radius: 10px;
-        margin-bottom: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
       }
 
-      .box1-div,
-      .box2-div,
-      .box3-div,
-      .box4-div,
-      .box5-div,
-      .box6-div,
-      .box7-div,
-      .box8-div,
-      .box9-div,
-      .box10-div,
-      .box11-div,
-      .box12-div,
-      .box13-div,
-      .box14-div,
-      .box15-div,
-      .box16-div {
+      .Logo-div {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .Logo-div img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .Logo-div h1 {
+        font-size: 32px;
+        color: #f5f5f5;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .Nav-div button {
+        background-color: #a1887f;
+        border: none;
+        color: white;
+        padding: 10px 22px;
+        margin: 0 8px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .Nav-div button:hover {
+        background-color: #3e2723;
+        transform: translateY(-2px);
+      }
+
+      .menu-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .menu-item {
         width: 22%;
-        min-height: 100px;
-        background-color: #d7ccc8;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center;
         margin: 10px 1%;
-        display: inline-block;
         text-align: center;
         font-size: 1.1em;
         padding: 35px;
         border-radius: 10px;
         transition: all 0.3s ease;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        color: #f5f5f5;
+        font-weight: bold;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
       }
 
-      .box1-div:hover,
-      .box2-div:hover,
-      .box3-div:hover,
-      .box4-div:hover,
-      .box5-div:hover,
-      .box6-div:hover,
-      .box7-div:hover,
-      .box8-div:hover,
-      .box9-div:hover,
-      .box10-div:hover,
-      .box11-div:hover,
-      .box12-div:hover,
-      .box13-div:hover,
-      .box14-div:hover,
-      .box15-div:hover,
-      .box16-div:hover {
-        background-color: #efebe9;
-        transform: translateY(-4px);
+      .menu-item:hover {
+        transform: scale(1.03);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
       }
 
@@ -96,24 +109,26 @@
       .box02-div,
       .box03-div {
         width: 31%;
-        min-height: 150px;
-        background-color: #d7ccc8;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center;
         text-align: center;
         font-size: 1.2em;
         border-radius: 10px;
         padding: 40px;
         transition: all 0.3s ease;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        color: #f5f5f5;
+        font-weight: bold;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
       }
 
       .box01-div:hover,
       .box02-div:hover,
       .box03-div:hover {
-        background-color: #efebe9;
-        transform: translateY(-4px);
+        transform: scale(1.03);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
       }
-
       .footer-div {
         width: 100%;
         min-height: 50px;
@@ -130,29 +145,146 @@
   </head>
 
   <body>
-    <div class="logo-div">A's Cafe</div>
+    <div class="Logo-Nav-div">
+      <header class="Logo-div">
+        <img src="./assets/layout1/LATTE.jpg" alt="A's Cafe Logo" />
+        <h1>A's Cafe</h1>
+      </header>
 
-    <div class="box1-div">Espresso</div>
-    <div class="box2-div">Latte</div>
-    <div class="box3-div">Mocha</div>
-    <div class="box4-div">Cappuccino</div>
-    <div class="box5-div">Macchiato</div>
-    <div class="box6-div">Matcha</div>
-    <div class="box7-div">Affogato</div>
-    <div class="box8-div">Cold Brew</div>
-    <div class="box9-div">Caramel Frappe</div>
-    <div class="box10-div">Iced Americano</div>
-    <div class="box11-div">Croissant</div>
-    <div class="box12-div">Cinnamon Roll</div>
-    <div class="box13-div">Bagel</div>
-    <div class="box14-div">Sandwich</div>
-    <div class="box15-div">Brownie</div>
-    <div class="box16-div">Cookies</div>
+      <nav class="Nav-div">
+        <button>Home</button>
+        <button>Menu</button>
+        <button>About</button>
+        <button>Contact</button>
+      </nav>
+    </div>
+
+    <div class="menu-grid">
+      <div
+        class="menu-item"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80');
+        "
+      >
+        Espresso
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/latte.jpg')"
+      >
+        Latte
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/mocha.jpg')"
+      >
+        Mocha
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/cappucinno.jpg')"
+      >
+        Cappuccino
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/macchiato.jpg')"
+      >
+        Macchiato
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/matcha.jpg')"
+      >
+        Matcha
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/affogato.jpg')"
+      >
+        Affogato
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/coldbrew.jpg')"
+      >
+        Cold Brew
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/caramelfrap.jpg')"
+      >
+        Caramel Frappe
+      </div>
+      <div
+        class="menu-item"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=800&q=80');
+        "
+      >
+        Iced Americano
+      </div>
+      <div
+        class="menu-item"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80');
+        "
+      >
+        Croissant
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/cinammonrols.jpg')"
+      >
+        Cinnamon Roll
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/bagel.jpg')"
+      >
+        Bagel
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/sandwich.jpg')"
+      >
+        Sandwich
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/brownies.jpg')"
+      >
+        Brownie
+      </div>
+      <div
+        class="menu-item"
+        style="background-image: url('./assets/layout4/cookies.jpg')"
+      >
+        Cookies
+      </div>
+    </div>
 
     <div class="box-div">
-      <div class="box01-div">Best Sellers</div>
-      <div class="box02-div">Seasonal Specials</div>
-      <div class="box03-div">Customer Favorites</div>
+      <div
+        class="box01-div"
+        style="background-image: url('./assets/layout4/best-selle.jpg')"
+      >
+        Best Sellers
+      </div>
+      <div
+        class="box02-div"
+        style="background-image: url('./assets/layout4/sea.webp')"
+      >
+        Seasonal Specials
+      </div>
+      <div
+        class="box03-div"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80');
+        "
+      >
+        Customer Favorites
+      </div>
     </div>
 
     <div class="footer-div">© 2025 A's Cafe — Brewed with Love ☕</div>
